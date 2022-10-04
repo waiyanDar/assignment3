@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetNum</title>
+</head>
+  
+<body style="background-color:black;">
+
+  <p style="color: white;" id="demo"></p>
+
+      <label style="color: white;">Please Choose Digit</label><br> 
+
+       <input type="number" id="quantity" min="1" max="6"> 
+
+        <button type="button" id="myButton">Get Number!</button>
+
+        <script>
+
+           let myNum;
+
+             document.getElementById("myButton").onclick= function s(){
+             myNum= document.getElementById("quantity").value;
+                 
+             if(myNum == 1){
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(9 - 1 + 1))+1;}
+                 
+                 else if(myNum == 2){
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(99 - 10 + 1))+10;}
+                 
+                 else if(myNum == 3){
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(999 - 100 + 1))+100;}
+                 
+                 else if(myNum == 4){
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(9_999 - 1000 + 1))+1000;}
+                 
+                 else if(myNum == 5){
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(99_999 - 10_000 + 1))+10_000;}
+                 
+                 else{
+                 document.getElementById("demo").innerHTML =
+                 Math.floor(Math.random() *(999_999 - 100_000 + 1))+100_000;}
+                }
+
+        </script>
+    </body> 
+</html>
